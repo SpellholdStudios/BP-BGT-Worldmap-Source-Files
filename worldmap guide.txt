@@ -8,31 +8,21 @@ A guide to make a worldmap
    'deutsch' means 'german' :)
    The layer order for a city is: the text for the name, background for the text, city picture
    The language order is always the same: english, german, italian, polish, spanish
+   The Chinese Font is SourceHanSerifCN-Bold (latest version: https://github.com/adobe-fonts/source-han-serif  )
+   
 3. After all changes and paintings are finished go to: Image --> Merge visible layers... 
                                                        Filters --> Artistic --> Clothify... (depth = 2)
                                                        Colors --> Curves... (open file 'worldmap color curve')
+													   
 4. Then Save the file as an *.bmp file in the 'bmp to mos to moz' (This have to be done for all 5 languages and the 2 sizes = 10 times)
-5. Install dltcep70.exe and go into setup
-   Look for the chitin.key path
-   IMPORTANT: look for the checkmark by 'read only' put it away!!!
-   Ignore the errors
-   Edit --> Image(mos) --> Load external Mos (change file type to Bitmap bmp) and open the worldmap *.bmp 
-   Save Mos As --> *.mos (Only 8 characters) in the 'bmp to mos to moz' (I use i.e. en_large.mos, de_small.mos)
-6. Use mospack to make a compressed *.moz file
+5. Install NearInfinity (latest version: https://github.com/NearInfinityBrowser/NearInfinity  )
+   Tools --> Convert --> Image to Mos
+   Input file : open the worldmap *.bmp
+   Output file : select the same directory
+   
+6. Use tileconv (latest version: https://github.com/InfinityTools/tileconv  ) to make a compressed *.moz file
 
 You can use this code for example:
-
-mospack -s en_small.mos
-mospack -s de_large.mos
-mospack -s de_small.mos
-mospack -s it_large.mos
-mospack -s it_small.mos
-mospack -s po_large.mos
-mospack -s po_small.mos
-mospack -s es_large.mos
-mospack -s es_small.mos
-mospack -s en_large.mos
-   
-In the 'bmp to mos to moz' directory you find the mospack.exe and the mospack.bat file
+	tileconv worldmap.mos
 
 7. Copy all the *.moz files into the right language folders in the Bp-BGT_worldmap and rename it. 
