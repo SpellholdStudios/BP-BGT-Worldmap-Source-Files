@@ -1,3 +1,9 @@
+<hr>
+
+:warning: **The maintenance and support of this project has been moved to a [new repository](https://github.com/Spellhold-Studios/BP-BGT-Worldmap-Source-Files).**
+
+<hr><br>
+
 # BP-BGT-Worldmap Source Files
  The original painting
 These are the original world map files with instructions on how to create the in-game world map. You have to unzip the files with 7zip and the image file is a gimp file.
